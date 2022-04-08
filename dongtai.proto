@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package DontaiGRPC;
+package DongtaiGRPC;
 
-option go_package="/go-pb;DontaiGRPC";
+option go_package="/go-pb;DongtaiGRPC";
 
 message Request{
     string text = 1;
@@ -13,6 +13,6 @@ message Response{
     string  message = 2;
 }
 
-service SearchService {
-    rpc Search(Request) returns (Response);
+service GRPCService {
+    rpc Send(Request) returns (Response);
 }
